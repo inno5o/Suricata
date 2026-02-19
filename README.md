@@ -6,12 +6,15 @@ To implement and test Suricata: a high performance, open source network threat d
 
 The following network topology, configurations and PCs were to be connected virtually.
 
+
 ![20250612_201249.jpg](./images/20250612_201249.jpg)
 
 ### Activities Done
 
 - I installed GNS3VM, Kali Linux, Ubuntu Server and Windows Machine in VMWare Workstation Pro
 - I installed Suricata in Ubuntu Server where it will be tested and successfully enable it to run automatically when the Virtual Machine is turned on
+
+
 
 ![Suricata 3.png](./images/Suricata_3.png)
 
@@ -28,12 +31,16 @@ ip route 0.0.0.0 0.0.0.0 <network>
 
 - Meanwhile I set the Kali VM to get an IP from R1 Automatically (DHCP) but it wouldn’t so to be quick I had to statically assign it and it successfully pinged Switch 2.
 
+
+
 ![Screenshot (148).png](./images/Screenshot_(148).png)
 
 - The Ubuntu Server successfully got an IP automatically through the following commands: sudo dhclient -v ens33 but noted that dhclient is not installed automatically in linux so had to install it through sudo apt install isc-dhcp-client
 - The Ubuntu Server was able to ping PC kali-1
 
 ![Screenshot (154).png](./images/Screenshot_(154).png)
+
+
 
 ### Installing Suricata
 
@@ -42,6 +49,8 @@ According to the official suricata documentation https://docs.suricata.io/en/sur
 Suricata will be installed in ubuntu server using command sudo apt install suricata. After installation there is need of updating rules so that suricata can be able to detect and alert necessary anomalies. These rules are updated using the command suricata-update. The rules’ default files and directory as of 2023 was */etc/suricata/rules* until an update was made so that rules become consistent with suricata when installed with suricata-update command. Let me confirm whether the rules are updated in the suricata.rules file.
 
 ![image.png](./images/image.png)
+
+
 
 **The Configuration File and Rule Writing**
 
@@ -67,6 +76,8 @@ The last thing on suricata configuration file for now is make sure that Suricata
 
 ![image 5.png](./images/image_5.png)
 
+
+
 **Testing Function**
 
 Now I have to test if Suricata is working, logging correct detections, classifying and prioritising them accordingly. I will use the ping command and Nmap from the Kali Linux machine in the Network.
@@ -85,6 +96,8 @@ Let me do an Aggressive Nmap scan which also request OS details of the Server.
 
 ![image.png](./images/image_7.png)
 
+
+
 As you can see it is logging detections and categorising them and also siting which tool was used to do the activities logged. 
 
 The next thing is to look in to different network threats to see if suricata can detect them.
@@ -94,6 +107,8 @@ So am going to install Yersinia and Ettercap in Kali Linux with their GUIs also 
 I successfully installed Ettercap and it’s GUI
 
 ![Screenshot (157).png](./images/Screenshot_(157).png)
+
+
 
 Yersinia was installed but the GUI couldn’t be.
 
