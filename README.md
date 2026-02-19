@@ -45,7 +45,7 @@ Suricata will be installed in ubuntu server using command sudo apt install suric
 
 **The Configuration File and Rule Writing**
 
-![image 1.png](./images/image 1.png)
+![image 1.png](./images/image_1.png)
 
 To make sure suricata logs according to the network my network I have to update the suricata configuration file. This file’s default location is the */etc/suricata/suricata.yaml* and will be opened and edited using sudo nano /etc/suricata/suricata.yaml 
 
