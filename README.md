@@ -45,27 +45,27 @@ Suricata will be installed in ubuntu server using command sudo apt install suric
 
 **The Configuration File and Rule Writing**
 
-![image.png](./images/image_1.png)
+![image 1.png](./images/image_1.png)
 
 To make sure suricata logs according to the network my network I have to update the suricata configuration file. This file’s default location is the */etc/suricata/suricata.yaml* and will be opened and edited using sudo nano /etc/suricata/suricata.yaml 
 
 In line with my network address configuration I am going to tell suricata which networks it should look at.
 
-![image.png](./images/image_2.png)
+![image 2.png](./images/image_2.png)
 
 The network specification was done at the vars: address-groups: HOME_NET:
 
 Outputs for logs are already update where they should be, in the */var/log/suricata .*
 
-![image.png](./images/image_3.png)
+![image 3.png](./images/image_3.png)
 
 An update on  which interface Suricata will use to detect anomalies should be made so that it knows where to take relevant information from.
 
-![image.png](./images/image_4.png)
+![image 4.png](./images/image_4.png)
 
 The last thing on suricata configuration file for now is make sure that Suricata is taking rules from the correct file/directory which is */var/lib/suricata/rules* 
 
-![image.png](./images/image_5.png)
+![image 5.png](./images/image_5.png)
 
 **Testing Function**
 
