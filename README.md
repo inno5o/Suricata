@@ -6,7 +6,7 @@ To implement and test Suricata: a high performance, open source network threat d
 
 The following network topology, configurations and PCs were to be connected virtually.
 
-![20250612_201249.jpg](20250612_201249.jpg)
+![20250612_201249.jpg](./images/20250612_201249.jpg)
 
 ### Activities Done
 
