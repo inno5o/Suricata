@@ -51,7 +51,7 @@ To make sure suricata logs according to the network my network I have to update 
 
 In line with my network address configuration I am going to tell suricata which networks it should look at.
 
-![image 2.png](./images/image_2.png)
+![image_2.png](./images/image_2.png)
 
 The network specification was done at the vars: address-groups: HOME_NET:
 
